@@ -17,7 +17,7 @@
   width: 600px;
   height: auto;
   padding-bottom: 20px;
-  margin: 20px 0;
+  margin: 0px 20px;
 }
 
 .imageContainer{
@@ -30,4 +30,10 @@
 
 section h3{
   text-align: center;
+}
+
+.left-arrow,.right-arrow{
+  width: 86px;
+  height: 86px;
+  cursor: pointer;
 }
