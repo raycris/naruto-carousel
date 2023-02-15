@@ -1,0 +1,33 @@
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* background: url("https://i.pinimg.com/originals/69/b9/33/69b9339b2932df73183a7d17a031e559.jpg"); */
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100vh;
+  background-position: center;
+}
+
+.cardContainer{
+  box-shadow: inset 0 0 0 1px hsla(0, 0%, 0%, .1);
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: auto;
+  padding-bottom: 20px;
+  margin: 20px 0;
+}
+
+.imageContainer{
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  object-fit: cover;
+}
+
+section h3{
+  text-align: center;
+}
