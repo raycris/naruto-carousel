@@ -1,4 +1,10 @@
 import { useState } from "react";
+
+import LikeButton from "./components/LinkButton";
+
+import LeftArrow from "./assets/Icon/left-arrow.svg";
+import RightArrow from "./assets/Icon/right-arrow.svg";
+
 import styles from "./App.module.css";
 
 const images = [
@@ -96,6 +102,7 @@ const images = [
 
 function App() {
   const [current, setCurrent] = useState(0);
+
   function nextSlide() {
     setCurrent(current === images.length - 1 ? 0 : current + 1);
   }
@@ -106,9 +113,13 @@ function App() {
 
   return (
     <div className={styles.container}>
-      <div className="left-arrow" onClick={prevSlide}>
-        ⬅
-      </div>
+      <picture onClick={prevSlide}>
+        <img
+          src={LeftArrow}
+          alt="left-arrow"
+          className={styles["left-arrow"]}
+        />
+      </picture>
 
       {images.map(
         (item, index) =>
@@ -122,12 +133,17 @@ function App() {
                   className={styles.imageContainer}
                 />
               </picture>
+              <LikeButton id={item.id} />
             </section>
           )
       )}
-      <div className="right-arrow" onClick={nextSlide}>
-        ⮕
-      </div>
+      <picture onClick={nextSlide}>
+        <img
+          src={RightArrow}
+          alt="right-arrow"
+          className={styles["right-arrow"]}
+        />
+      </picture>
     </div>
   );
 }
