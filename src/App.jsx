@@ -125,7 +125,7 @@ function App() {
         (item, index) =>
           current === index && (
             <section className={styles.cardContainer} key={item.id}>
-              <h3>{item.name}</h3>
+              <h2>{item.name}</h2>
               <picture>
                 <img
                   src={item.image}
