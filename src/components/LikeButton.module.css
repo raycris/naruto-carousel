@@ -1,5 +1,8 @@
 .button {
+  width: 30px;
   cursor: pointer;
   height: 30px;
-  width: 30px;
+  border: none;
+  margin: 10px;
+  background: transparent;
 }
