@@ -114,11 +114,15 @@ function App() {
   return (
     <div className={styles.container}>
       <picture onClick={prevSlide}>
-        <img
-          src={LeftArrow}
-          alt="left-arrow"
-          className={styles["left-arrow"]}
-        />
+        {current === 0 ? (
+          ""
+        ) : (
+          <img
+            src={LeftArrow}
+            alt="left-arrow"
+            className={styles["left-arrow"]}
+          />
+        )}
       </picture>
 
       {images.map(
@@ -138,11 +142,15 @@ function App() {
           )
       )}
       <picture onClick={nextSlide}>
-        <img
-          src={RightArrow}
-          alt="right-arrow"
-          className={styles["right-arrow"]}
-        />
+        {current === images.length - 1 ? (
+          ""
+        ) : (
+          <img
+            src={RightArrow}
+            alt="right-arrow"
+            className={styles["right-arrow"]}
+          />
+        )}
       </picture>
     </div>
   );
